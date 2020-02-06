@@ -1,0 +1,29 @@
+
+<div class="container" style="background:#DDA0DD; #num1 padding: 10px; width:450px; height: 430px; float:left ">
+
+<b>Enter num 1 :</b><input type="number" name="num1" [(ngModel)]="num1" #box value="10" (input)="this.isDisabled = false; this.isDisabled_2 = false; isDisabled_3 = false;" style="width:200px;" class="form-control"  /><br>
+<b>Enter num 2 :</b><input type="number" name="num2" [(ngModel)]="num2" #box value="5" [disabled]="isDisabled" (input)="this.isDisabled_1 = false; this.isDisabled_3 = true;" style="width:200px;" class="form-control" /><br>
+<button class="btn btn-primary btn-sm" value="result" (click)=submit(box.value) [disabled]="isDisabled_2" id="b1" >Submit</button><br><br>
+
+
+<div class="container" style="background:lightgreen; margin-top:-220px; padding: 10px; width:130px; height: 400px; float:right ">
+<input type="radio" name="add" [(ngModel)]="radio" [disabled]="isDisabled_1" value="add"><b>Add</b><br>
+<input type="radio" name="subtract" [(ngModel)]="radio" [disabled]="isDisabled_1" value="subtract"> <b>Subtract</b><br>
+<input type="radio" name="multiply" [(ngModel)]="radio" [disabled]="isDisabled_1" value="multiply"> <b>Multiply</b><br>
+<input type="radio" name="divide" [(ngModel)]="radio" [disabled]="isDisabled_1" value="divide"> <b>Divide</b><br>
+<input type="radio" name="module" [(ngModel)]="radio" [disabled]="isDisabled_1" value="module"> <b>Module</b><br>
+<input type="radio" name="exponent" [(ngModel)]="radio" [disabled]="isDisabled_3" value="exponent"> <b>Exponent</b>
+</div>
+
+<form >
+<div>
+
+<p><b>Addition Result :--</b>{{this.num5 | add: num6}}<br>
+<b>Subtract Result :--</b>{{num8 | subtract: num7}}<br>
+<b>Multiply Result :--</b>{{num3 | multiply: num4}}<br>
+<b>Division Result :--</b>{{num10 | divide: num9}}<br>
+<b>Modulus Result :--</b>{{num12 | module: num11}}<br>
+<b>Exponent Result :--</b>{{num13 | exponent}}<br></p>
+</div>
+</form>
+</div>
